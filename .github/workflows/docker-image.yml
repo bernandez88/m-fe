@@ -34,11 +34,8 @@ jobs:
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.ACR_REPOSITORY }}:${{ github.sha }}
         
         - name: 'Deploy to Azure App Service'
-          uses: azure/cli@v1
-          with:
-            azure-cli-version: '2.42.0'
-            script: |
-              az appservice webapp deployment create \
-                --resource-group ${{ secrets.RESOURCE_GROUP }} \
-                --name ${{ secrets.APP_SERVICE_NAME }} \
-                --image ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.ACR_REPOSITORY }}:${{ github.sha }}
+          run: |
+          az appservice webapp deployment create \
+            --resource-group ${{ secrets.RESOURCE_GROUP }} \
+            --name ${{ secrets.APP_SERVICE_NAME }} \
+            --image ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.ACR_REPOSITORY }}:${{ github.sha }}
