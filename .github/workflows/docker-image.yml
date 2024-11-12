@@ -2,7 +2,7 @@ on: [push]
 name: Linux_Container_Workflow
 
 jobs:
-    build-and-deploy:
+    build:
         runs-on: ubuntu-latest
         steps:
         # checkout the repo
@@ -32,13 +32,10 @@ jobs:
         - run: |
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.ACR_REPOSITORY }}:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.ACR_REPOSITORY }}:${{ github.sha }}
-            
-        - name: Install paramiko
-          run: pip install --upgrade paramiko
         
-        - name: 'Deploy to Azure App Service' 
+        - name: Deploy to Azure Web App
           run: |
-            az appservice webapp deployment create \
-              --resource-group ${{ secrets.RESOURCE_GROUP }} \
-              --name ${{ secrets.APP_SERVICE_NAME }} \
-              --image ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.ACR_REPOSITORY }}:${{ github.sha }}
+            az webapp deployment source config-container \
+                -g ${{ secrets.RESOURCE_GROUP }} \
+                -n ${{ secrets.APP_SERVICE_NAME }} \
+                --image ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.ACR_REPOSITORY }}:${{ github.sha }}
