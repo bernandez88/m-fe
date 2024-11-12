@@ -1,0 +1,36 @@
+{
+  "components": {
+    "modal": {
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    }
+  },
+  "providers": {
+    "msal-browser": {
+      "no-active-account": "No active account found. Please sign in."
+    }
+  },
+  "title": "MROH Revenue Forecast System",
+  "utils": {
+    "parse-jwt": {
+      "invalid-header": "The provided string is not a valid JWT header.",
+      "invalid-jwt": "The provided string is not a valid JWT.",
+      "invalid-payload": "The provided string is not a valid JWT payload."
+    }
+  },
+  "pages": {
+    "login": {
+      "welcome": "Welcome to the",
+      "revenue-forecast": "Revenue Forecast",
+      "system": "System!",
+      "subheader": "It takes only a few clicks to get started!",
+      "log-in-microsoft": "Login with Microsoft",
+      "all-rights-reserved": "MROH Holdings, All rights reserved"
+    },
+    "home": {
+      "my-workspace": "My workspace",
+      "create-revision": "Create revision",
+      "revision-log": "Revision log"
+    }
+  }
+}

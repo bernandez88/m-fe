@@ -1,0 +1,23 @@
+{
+  "language": "en",
+  "allowCompoundWords": true,
+  "ignorePaths": ["node_modules/**", "build/**", "coverage/**", "dist/**", ".git/**"],
+  "ignoreRegExpList": ["\\/\\^?.*\\$?\\/"],
+  "files": ["**/*.{js,jsx,ts,tsx,json}"],
+  "dictionaries": [
+    "bash",
+    "companies",
+    "css",
+    "docker",
+    "filetypes",
+    "fonts",
+    "git",
+    "html",
+    "node",
+    "npm",
+    "powershell",
+    "sql",
+    "typescript"
+  ],
+  "words": ["antfu", "biomejs", "lcov", "mroh", "msal", "signin", "signup", "sonarjs", "svgr", "zustand"]
+}

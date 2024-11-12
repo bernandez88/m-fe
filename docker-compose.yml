@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    container_name: mroh-rfs-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - MSAL_CLIENT_ID=${MSAL_CLIENT_ID}
+        - MSAL_AUTHORITY_TENANT_ID=${MSAL_AUTHORITY_TENANT_ID}
+        - MSAL_AUTHORITY_POLICY=${MSAL_AUTHORITY_POLICY}
+        - PUBLIC_URL=${PUBLIC_URL}
+        - REACT_APP_API_URL=${REACT_APP_API_URL}
+        - REACT_APP_API_VERSION=${REACT_APP_API_VERSION}
+    ports:
+      - '80:80'

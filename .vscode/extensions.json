@@ -1,0 +1,33 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "alefragnani.Bookmarks",
+    "dakara.transformer",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "GrapeCity.gc-excelviewer",
+    "Gruntfuggly.todo-tree",
+    "jock.svg",
+    "lokalise.i18n-ally",
+    "mechatroner.rainbow-csv",
+    "meganrogge.template-string-converter",
+    "mikestead.dotenv",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-wsl",
+    "naumovs.color-highlight",
+    "pflannery.vscode-versionlens",
+    "PKief.material-icon-theme",
+    "quicktype.quicktype",
+    "seatonjiang.gitmoji-vscode",
+    "streetsidesoftware.code-spell-checker-spanish",
+    "streetsidesoftware.code-spell-checker",
+    "unifiedjs.vscode-mdx",
+    "usernamehw.errorlens",
+    "WallabyJs.console-ninja",
+    "wayou.vscode-todo-highlight",
+    "yoavbls.pretty-ts-errors",
+    "ZixuanChen.vitest-explorer"
+  ]
+}

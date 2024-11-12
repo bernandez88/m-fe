@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Aptos', sans-serif !important;
+}
+
+body {
+  line-height: 1.5;
+  letter-spacing: normal;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+@layer utilities {
+  .skeleton-pulse {
+    animation: skeleton-pulse 1.5s linear infinite alternate;
+  }
+
+  .skeleton-linear {
+    animation: skeleton-linear 1.5s infinite linear;
+    background: linear-gradient(90deg, #0001 33%, #0005 50%, #0001 66%) #f2f2f2;
+    background-size: 300% 100%;
+  }
+
+  @keyframes skeleton-pulse {
+    0% {
+      background-color: #e1e1e1;
+    }
+
+    100% {
+      background-color: #acabab;
+    }
+  }
+
+  @keyframes skeleton-linear {
+    0% {
+      background-position: right;
+    }
+  }
+}

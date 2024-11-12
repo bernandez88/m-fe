@@ -1,0 +1,44 @@
+{
+  "eslint.nodeEnv": "development",
+  "eslint.useFlatConfig": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "$(capture).ts, $(capture).*.ts, $(capture)_*.ts, $(capture)-*.ts",
+    "*.tsx": "$(capture).ts, $(capture).*.ts, $(capture)_*.ts, $(capture)-*.ts, $(capture).*.tsx, $(capture)_*.tsx, $(capture)-*.tsx",
+    "*.mdx": "$(capture).md",
+    ".env": ".env*",
+    ".gitignore": ".gitattributes*, .gitignore*, .git-blame-ignore",
+    "Dockerfile": "Docker*, docker*, .docker*, nginx*",
+    "package.json": ".browserslist*, .editorconfig*, eslint*, .huskyrc*, .prettier*, .lintstaged*, tailwind.*, postcss.*, pnpm*, .pnpm*, .npm*, *.json",
+    "vite.config.ts": "vitest.config.ts, index.html"
+  },
+  "i18n-ally.annotationMaxLength": 96,
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["src/locales"],
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.defaultNamespace": "local",
+  "i18n-ally.enabledParsers": ["json"],
+  "i18n-ally.namespace": true,
+  "i18n-ally.sortKeys": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "material-icon-theme.files.associations": {
+    "*.styles.tsx": "sass",
+    "*.types.ts": "typescript-def",
+    ".npmrc.example": "npm"
+  },
+  "material-icon-theme.folders.associations": {
+    ".azuredevops": "Azure-pipelines",
+    ".scannerwork": "Other",
+    "store": "Redux-store"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "(?<=tv\\([^]+[\\s|\\[][\"'`])([^\"'`]*)?",
+    "Styles=\\{\\s*\\{[^}]*:\\s*['\"]([^'\"]+)['\"]"
+  ],
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
+}
