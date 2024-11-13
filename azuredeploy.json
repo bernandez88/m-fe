@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2022-03-01",
+            "name": "[parameters('appName')]",
+            "location": "[resourceGroup().location]",
+            "kind": "app",
+            "properties": {
+                "siteConfig": {
+                    "linuxFxVersion": "DOCKER|mrohcrbj.azurecr.io/mroh-frontend:b9a88dae1666024a9f7628022e1e6d5be46071a7",
+                    "alwaysOn": true,
+                    "http2Enabled": true
+                }
+            }
+        }
+    ],
+    "parameters": {
+        "appName": {
+            "type": "string"
+        }
+    }
+}
