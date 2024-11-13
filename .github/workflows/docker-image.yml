@@ -38,4 +38,4 @@ jobs:
           with:
             template: azuredeploy.json            
             parameters: azuredeploy.parameters.json
-            scope: 'read write'
+            scope: resourceGroup
